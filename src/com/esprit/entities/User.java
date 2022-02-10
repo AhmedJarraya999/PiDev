@@ -13,6 +13,35 @@ public class User {
     private int id ;
     private String name;
     private String lastname;
+    private String email;
+    private String image;
+    private String password;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    
 
     public int getId() {
         return id;
