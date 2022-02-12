@@ -9,9 +9,6 @@ package com.esprit.controllers;
  *
  * @author jaray
  */
-public class Login {
-    private void checkLogin(){
-        System.out.println("check login ");
-    }
+public class SignupController {
     
 }
