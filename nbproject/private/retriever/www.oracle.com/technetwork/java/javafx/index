@@ -1,0 +1,40 @@
+{
+
+"LocalData": {
+"IdcService": "SS_GET_PAGE",
+"RedirectUrl": "/technetwork/java/javafx/index.html",
+"SctDiscardServiceLogEntry": "true",
+"StatusCode": "-1",
+"StatusMessage": "JSON strings must begin with a '",
+"StatusMessageKey": "!csJsonStringMustBeginWithBrace",
+"changedMonikers": "",
+"changedSubjects": "",
+"dUser": "anonymous",
+"idcToken": "",
+"localizedForResponse": "1",
+"refreshMonikers": "",
+"refreshSubMonikers": "",
+"refreshSubjects": "",
+"siteId": "otnen",
+"siteRelativeUrl": "java/javafx/",
+"ssUrlPrefix": "/technetwork/",
+"ssUrlType": "2"
+},
+
+
+"ResultSets": {
+"UserAttribInfo": {
+"currentRow": 0,
+"fields": [
+{ "name": "dUserName" },
+{ "name": "AttributeInfo" }
+],
+"rows": [
+[
+"anonymous",
+"account,CRMONDEMAND,1,account,#none,1,account,PRMS,1,account,OCOM,1,account,MKTG_ADMIN,1,account,OPNPublic,1,account,OCOMPublic,1,account,MKTG_ADMIN/MYO_ADMIN,1,account,OTN,1,account,EMPL,1,account,JAVA,1,role,guest,15"
+]
+]
+}
+}
+}
