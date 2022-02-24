@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.AjouterPersonneController">
+   <children>
+      <Pane fx:id="BoutonValider" layoutX="14.0" layoutY="14.0" prefHeight="367.0" prefWidth="571.0" style="-fx-background-color: ivory; -fx-border-width: 2px; -fx-border-color: black;" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label layoutX="70.0" layoutY="83.0" prefHeight="17.0" prefWidth="80.0" text="Nom :" textAlignment="CENTER" />
+            <Label layoutX="70.0" layoutY="160.0" text="Prenom :" />
+            <Button id="valider" fx:id="btn" layoutX="405.0" layoutY="274.0" mnemonicParsing="false" text="Valider">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField id="nomText" fx:id="nom" layoutX="150.0" layoutY="78.0" />
+            <TextField id="prenomText" fx:id="prenom" layoutX="150.0" layoutY="155.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
