@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package service;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Mortadha
  */
-public interface ISservice<T> {
+public interface IService <T>{
     public void add(T t);
     public void update(int id,T t);
     public void delete(int id);

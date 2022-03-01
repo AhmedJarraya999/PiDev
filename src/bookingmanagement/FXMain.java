@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usermanagement;
+package bookingmanagement;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -27,10 +27,10 @@ public class FXMain extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/Authentification.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXMLhost.fxml"));
             
             Scene scene = new Scene(root);
-            
+            scene.getStylesheets().add("/GUI/newCascadeStyleSheet.css");
             
             
             primaryStage.setTitle("Hello World!");

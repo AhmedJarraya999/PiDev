@@ -5,6 +5,7 @@
  */
 package utils;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -13,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author jarrraya
+ * @author Mortadha
  */
 public class Myconnection {
     private final String URL="jdbc:mysql://127.0.0.1:3306/booking" ;
