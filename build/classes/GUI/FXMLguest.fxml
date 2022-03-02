@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FXMLguestController">
+   <children>
+      <ImageView fitHeight="684.0" fitWidth="868.0">
+         <image>
+            <Image url="@../img/reservation-privilegier-hoteliere-systeme-gestion-660x400.jpg" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="40.0" prefWidth="868.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#disconnect" opacity="0.8" prefHeight="40.0" prefWidth="119.0" text="Disconnect">
+               <HBox.margin>
+                  <Insets left="749.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </HBox>
+      <ListView fx:id="listviewstay" layoutX="86.0" layoutY="101.0" opacity="0.8" prefHeight="488.0" prefWidth="696.0" />
+      <Button layoutX="220.0" layoutY="614.0" mnemonicParsing="false" onAction="#makereservation" opacity="0.8" prefHeight="40.0" prefWidth="125.0" text="Reservation">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="491.0" layoutY="614.0" mnemonicParsing="false" onAction="#viewfamily" opacity="0.8" prefHeight="40.0" prefWidth="119.0" text="View family">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfsearch" layoutX="369.0" layoutY="57.0" opacity="0.9" promptText="Search" style="-fx-background-color: #f0f8ff;" />
+   </children>
+</AnchorPane>

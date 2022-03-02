@@ -12,12 +12,17 @@ import java.util.Date;
  * @author Mortadha
  */
 public class Booking {
+    
     private int id;
     private int idhost;
     private int idguest;
     private Date bookingdate;
     private Date firstDate;
     private Date lastDate;
+    //attribut state baad bech nesthakouh fel rating state naatiweh mel fenetre available stays ki teclick aal avalisable stays fama button rate w rate matajem taamlou ken matkoun aamel booking aal stay edhika 
+    // wel datemteeha sar
+    
+    // attribut code fih code elbooking yetbeaath par email generated randomly
 
     public Booking() {
     }
