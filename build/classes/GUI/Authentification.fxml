@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="defaultLayer" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AuthentificationController">
+    <children>
+      <AnchorPane fx:id="mainLayer" layoutX="386.0" prefHeight="565.0" prefWidth="689.0" style="-fx-background-color: white;">
+         <children>
+            <VBox fx:id="vbox0" layoutX="68.0" layoutY="100.0" prefHeight="277.0" prefWidth="217.0" spacing="35.0">
+               <children>
+                  <TextField fx:id="firstnametf" promptText="First Name" />
+                  <TextField fx:id="emailTF" promptText="Email" />
+                  <PasswordField fx:id="passwordPF" promptText="Password" />
+                  <TextField fx:id="phonetf" promptText="Phone number" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox2" layoutX="392.0" layoutY="100.0" prefHeight="237.0" prefWidth="249.0" spacing="35.0">
+               <children>
+                  <TextField fx:id="lastnametf" promptText="Last name" />
+                  <TextField fx:id="usernametf" promptText="Username" />
+                  <RadioButton fx:id="rbhost" mnemonicParsing="false" text="Host">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="g1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rbstay" mnemonicParsing="false" text="Guest" toggleGroup="$g1">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <JFXButton fx:id="signupbtn" layoutX="277.0" layoutY="424.0" onMouseClicked="#performeSignup" prefHeight="38.0" prefWidth="158.0" style="-fx-background-color: #121212;" styleClass="customButton" text="SignUP" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font></JFXButton>
+            <VBox fx:id="vbox3" layoutX="221.0" layoutY="121.0" prefHeight="90.0" prefWidth="217.0" spacing="50.0">
+               <children>
+                  <TextField fx:id="loginTF" promptText="Login" />
+                  <PasswordField fx:id="passwordTF" promptText="Password" />
+               </children>
+            </VBox>
+            <Label fx:id="settingLB1" layoutX="309.0" layoutY="30.0" text="Login">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnlogin" alignment="CENTER" layoutX="302.0" layoutY="294.0" onMouseClicked="#performLogIn" style="-fx-background-color: #121212;" styleClass="customButton" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></JFXButton>
+            <Label fx:id="closeLB" disable="true" layoutX="641.0" layoutY="55.0" onMouseClicked="#closeScene" prefHeight="31.0" prefWidth="18.0" text="X" textFill="#2b00ff" visible="false">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="phoneicon" fitHeight="26.0" fitWidth="33.0" layoutX="183.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/baseline_person_outline_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="passwordIcon" fitHeight="31.0" fitWidth="26.0" layoutX="185.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-mot-de-passe-52.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="matFIcon" fitHeight="26.0" fitWidth="26.0" layoutX="359.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/baseline_person_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deviseIcon" fitHeight="31.0" fitWidth="32.0" layoutX="358.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/baseline_person_outline_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="numtel1Icon" fitHeight="26.0" fitWidth="26.0" layoutX="37.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-téléphone-débranché-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emailIcon" fitHeight="26.0" fitWidth="26.0" layoutX="36.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/baseline_email_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="passIcon" fitHeight="26.0" fitWidth="26.0" layoutX="38.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-mot-de-passe-52.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rsIcon" fitHeight="26.0" fitWidth="26.0" layoutX="37.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/baseline_face_black_24dp.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="610.0" layoutY="14.0" prefHeight="16.0" prefWidth="62.0" spacing="10.0">
+               <children>
+                  <Circle fx:id="reduceBtn" fill="#27c941" onMouseClicked="#reduceOnClick" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#fdbb2d" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="closeBtn" fill="#fc5d57" onMouseClicked="#closeOnClick" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </HBox>
+            <Button fx:id="btnfp" layoutX="369.0" layoutY="239.0" mnemonicParsing="false" onAction="#forgotpassword" style="-fx-background-color: #121212;" text="Forgot password" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="animLayer" prefHeight="565.0" prefWidth="386.0" style="-fx-background-color: linear-gradient(#200000,#404080);" styleClass="anLayer">
+         <children>
+            <Label fx:id="varLB" layoutX="97.0" layoutY="283.0" text="Welcome Back!" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="signUpBtn" layoutX="115.0" layoutY="337.0" onMouseClicked="#signUpForm" prefHeight="50.0" prefWidth="158.0" styleClass="signUpButton" text="Sign Up" />
+            <JFXButton fx:id="swapbtn" layoutX="114.0" layoutY="337.0" onMouseClicked="#swapForm" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: #121212;" styleClass="signUpButton" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></JFXButton>
+            <Label fx:id="helloLB" layoutX="115.0" layoutY="283.0" text="Hello, Friend" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="symbol" fitHeight="150.0" fitWidth="200.0" layoutX="95.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="164.0" layoutY="227.0" text="Star Tours" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
