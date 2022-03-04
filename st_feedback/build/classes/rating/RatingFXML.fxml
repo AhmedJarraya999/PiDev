@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="315.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rating.RatingFXMLController">
+    <stylesheets>
+        <URL value="@ratingfxml.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="249.0" prefWidth="188.0" spacing="10.0">
+         <children>
+            <TextField id="user_id" fx:id="user_id" promptText="user_id" />
+            <TextField id="booking_id" fx:id="stay_id" promptText="stay_id" />
+            <Rating id="rating_id" fx:id="fxrating" />
+            <Text fx:id="fxvcomment" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="189.13671875" />
+            <TextArea fx:id="fxcomment" prefHeight="86.0" prefWidth="188.0" promptText="comment" />
+         </children>
+      </VBox>
+      <Button id="sub_btn" fx:id="fxsub_btn" layoutX="144.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="58.0" text="Submit" />
+      <Button id="sub_btn" fx:id="fxmod_btn" layoutX="79.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="58.0" text="Modify" />
+      <Button id="sub_btn" fx:id="fxdel_btn" layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="58.0" text="Delete" />
+      <TableView id="tvrating" fx:id="fxtvrating" layoutX="259.0" layoutY="14.0" prefHeight="260.0" prefWidth="176.0">
+        <columns>
+            <TableColumn id="rating_tv" fx:id="fxrating_tv" prefWidth="65.0" text="rating" />
+            <TableColumn id="comment_tv" fx:id="fxcomment_tv" prefWidth="109.0" text="comment" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
