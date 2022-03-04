@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="box" prefHeight="100.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxblog.control.CommentSampleController">
+   <children>
+      <ImageView fitHeight="99.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/account.png" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="100.0" prefWidth="838.0">
+         <children>
+            <Label fx:id="username" text="User name" textFill="#3145e1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="txt_comment" alignment="TOP_LEFT" prefHeight="47.0" prefWidth="819.0" text="Comment Comment Comment Comment Comment Comment Comment Comment Comment Comment ">
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="26.0" prefWidth="838.0">
+               <children>
+                  <Label text="Date :">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="date" text="txt_date">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="btn_likes" mnemonicParsing="false" text="like">
+                     <HBox.margin>
+                        <Insets left="400.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="nb_likes" text="nb_likes">
+                     <HBox.margin>
+                        <Insets left="10.0" top="3.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Likes">
+                     <HBox.margin>
+                        <Insets left="10.0" top="3.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="btn_delete" mnemonicParsing="false" onAction="#delete_comment" prefHeight="25.0" prefWidth="151.0" text="Delete">
+         <HBox.margin>
+            <Insets right="30.0" top="10.0" />
+         </HBox.margin>
+      </Button>
+   </children>
+</HBox>

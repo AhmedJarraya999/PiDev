@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxblog.view.ExperienceController">
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxblog.control.ExpSampleController">
    <children>
       <Label fx:id="lb_title" text="Title" textFill="#805b27">
          <padding>
@@ -34,15 +34,31 @@
       </Label>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label fx:id="lb_likes" text="Likes">
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="53.0" text="Likes">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
             </Label>
-            <Label fx:id="lb_date" text="date">
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
+            <Label fx:id="lb_likes" prefHeight="17.0" prefWidth="60.0" text="Likes" textFill="ROYALBLUE">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="122.0" layoutY="10.0" prefHeight="17.0" prefWidth="48.0" text="date">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_date" prefHeight="17.0" prefWidth="109.0" text="date" textFill="ROYALBLUE">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
             </Label>
          </children>
       </HBox>
