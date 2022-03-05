@@ -19,7 +19,7 @@ import utils.Myconnection;
 
 /**
  *
- * @author Mortadha
+ * @author Jihene
  */
 public class StayService implements IService<Stay>{
     Connection cnx;
