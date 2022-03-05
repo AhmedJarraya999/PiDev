@@ -22,7 +22,7 @@ import utils.Myconnection;
 
 /**
  *
- * @author Mortadha
+ *@author Jihene
  */
 public class BookingService implements IService<Booking>{
     Connection cnx;
@@ -32,8 +32,8 @@ public class BookingService implements IService<Booking>{
     @Override
     public void add(Booking t) {
         try {
-            Statement st;
-            st=cnx.createStatement();
+            Statement st1;
+            st1=cnx.createStatement();
             String query="INSERT INTO `booking`"
                     + "( `idhost`, `idguest`,"
                     + " `bookingdate`,"
@@ -41,7 +41,7 @@ public class BookingService implements IService<Booking>{
                     + " VALUES ('"+t.getIdhost()+"','"+t.getIdguest()+"',"
                     + "'"+t.getBookingdate()+"','"+t.getFirstDate()+"',"
                     + "'"+t.getLastDate()+"')";
-            st.executeUpdate(query);
+            st1.executeUpdate(query);
         } catch (SQLException ex) {
             Logger.getLogger(BookingService.class.getName()).log(Level.SEVERE, null, ex);
         }
