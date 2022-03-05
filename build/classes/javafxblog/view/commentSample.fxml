@@ -43,7 +43,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="btn_likes" mnemonicParsing="false" text="like">
+                  <Button fx:id="btn_likes" mnemonicParsing="false" onAction="#like_comment" text="like">
                      <HBox.margin>
                         <Insets left="400.0" />
                      </HBox.margin>
@@ -56,6 +56,11 @@
                   <Label text="Likes">
                      <HBox.margin>
                         <Insets left="10.0" top="3.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="id_comment" text="id">
+                     <HBox.margin>
+                        <Insets left="50.0" top="3.0" />
                      </HBox.margin>
                   </Label>
                </children>

@@ -23,6 +23,11 @@
                         <Insets left="10.0" top="20.0" />
                      </HBox.margin>
                   </Button>
+                  <Button fx:id="bnt_refresh" mnemonicParsing="false" text="Refresh">
+                     <HBox.margin>
+                        <Insets left="800.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
                </children>
             </HBox>
          </top>
@@ -53,7 +58,7 @@
                            </HBox.margin>
                         </Label>
                         <Label fx:id="date" prefHeight="17.0" prefWidth="283.0" text="date" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" text="Like">
+                        <ToggleButton fx:id="btn_like" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" text="Like">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
