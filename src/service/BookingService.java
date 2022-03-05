@@ -13,9 +13,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 import utils.Myconnection;
 
 /**
@@ -142,5 +144,10 @@ public class BookingService implements IService<Booking>{
         }
         return lb;
         
+    }
+    public List<Booking> sortedByDate(){
+        List<Booking> bookings=findAll();
+        List<Booking> resultat=bookings.stream().sorted(Comparator.comparing(Booking::getBookingdate)).collect(Collectors.toList());
+        return resultat;
     }
 }

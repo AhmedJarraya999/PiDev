@@ -3,7 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -58,6 +59,15 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <ListView fx:id="listviewstay" layoutX="274.0" layoutY="87.0" onMouseClicked="#fillforum" prefHeight="374.0" prefWidth="569.0" />
+      <TableView fx:id="listviewstay" layoutX="301.0" layoutY="87.0" onMouseClicked="#fillforum" prefHeight="375.0" prefWidth="551.0">
+        <columns>
+          <TableColumn fx:id="idstay" prefWidth="41.0" text="ID" />
+          <TableColumn fx:id="capacity" prefWidth="59.0" text="Capacity" />
+            <TableColumn fx:id="idhost" prefWidth="53.0" text="ID Host " />
+            <TableColumn fx:id="description" prefWidth="147.0" text="Description" />
+            <TableColumn fx:id="startdate" prefWidth="139.0" text="Start Date" />
+            <TableColumn fx:id="enddate" prefWidth="111.0" text="End Date" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

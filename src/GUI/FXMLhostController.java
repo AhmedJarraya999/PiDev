@@ -27,8 +27,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -54,8 +57,20 @@ public class FXMLhostController implements Initializable {
     private TextArea tfdescription;
     StayService ss=new StayService();
     @FXML
-    private ListView<Stay> listviewstay;
+    private TableView<Stay> listviewstay;
     ObservableList<Stay> data=FXCollections.observableArrayList();
+    @FXML
+    private TableColumn<Stay, Integer> idstay;
+    @FXML
+    private TableColumn<Stay, Integer> capacity;
+    @FXML
+    private TableColumn<Stay, Integer> idhost;
+    @FXML
+    private TableColumn<Stay, String> description;
+    @FXML
+    private TableColumn<Stay, Date> startdate;
+    @FXML
+    private TableColumn<Stay, Date> enddate;
     
     
     
@@ -222,7 +237,8 @@ public class FXMLhostController implements Initializable {
     @FXML
     private void fillforum(MouseEvent event) {
         Stay s=listviewstay.getSelectionModel().getSelectedItem();
-        tfcapacity.setText(String.valueOf(s.getCapacity()));
+        if(s!=null){
+            tfcapacity.setText(String.valueOf(s.getCapacity()));
         tfdescription.setText(s.getDescription());
         Instant instant = Instant.ofEpochMilli(s.getEnddate_availability().getTime());
         LocalDateTime ldt = LocalDateTime.ofInstant(instant, ZoneOffset.UTC);
@@ -230,9 +246,19 @@ public class FXMLhostController implements Initializable {
         Instant instant1 = Instant.ofEpochMilli(s.getStartdate_availability().getTime());
         LocalDateTime ldt1 = LocalDateTime.ofInstant(instant, ZoneOffset.UTC);
         dpstardate.setValue(ldt1.toLocalDate());
+        }
+        
     }
     public void refreshlist(){
+        data.clear();
         data=FXCollections.observableArrayList(ss.findAll());
+         
+        idstay.setCellValueFactory(new PropertyValueFactory<>("id"));
+        capacity.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+        idhost.setCellValueFactory(new PropertyValueFactory<>("idhost"));
+        description.setCellValueFactory(new PropertyValueFactory<>("description"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("startdate_availability"));
+        enddate.setCellValueFactory(new PropertyValueFactory<>("enddate_availability"));
         listviewstay.setItems(data);
     }
     

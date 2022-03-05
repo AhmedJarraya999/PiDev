@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,8 +19,11 @@ import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import service.BookingService;
 import service.StayService;
@@ -36,22 +40,62 @@ import utils.Mailapi;
 public class FXMLguestController implements Initializable {
     int id;
 
-    @FXML
-    private ListView<Stay> listviewstay;
+    
     @FXML
     private TextField tfsearch;
     ObservableList<Stay> data = FXCollections.observableArrayList();
     StayService ss=new StayService();
     BookingService bs=new BookingService();
+    List<Stay> stays=ss.findAll();
+    int i=0;
+    int max_stays=stays.size();
+    @FXML
+    private ImageView imageview;
+    @FXML
+    private Label label;
+    @FXML
+    private Label labelfamily;
+    @FXML
+    private Label label1;
+    @FXML
+    private Label label2;
+    @FXML
+    private Label label3;
+    @FXML
+    private Label label21;
+    @FXML
+    private Label labelenddate;
+    @FXML
+    private Label labelstartdate;
+    @FXML
+    private Label labeldescription;
+    @FXML
+    private Label labelcapacity;
+    
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         // TODO
-        refreshlist();
-        recherche_avance();
+      
+        
+        Stay s=stays.get(i);
+        String picture ="file:" + "C:\\\\Users\\\\HP\\\\Desktop\\\\PiDev\\\\PiDev\\\\src\\\\img\\\\stay"+i+".jpg";
+        //String familyname=serviceuser.findbyif(s.getIdhost).getNom();
+        //label.setText(familyname);
+        labelfamily.setText(""+s.getIdhost());
+        labelcapacity.setText(""+s.getCapacity());
+        labeldescription.setText(""+s.getDescription());
+        labelstartdate.setText(""+s.getStartdate_availability());
+        labelenddate.setText(""+s.getEnddate_availability());
+         Image image = new Image(picture);
+
+        imageview.setImage(image);
+
+        
     }    
 
     @FXML
@@ -61,7 +105,8 @@ public class FXMLguestController implements Initializable {
 
     @FXML
     private void makereservation(ActionEvent event) {
-        Stay s=listviewstay.getSelectionModel().getSelectedItem();
+        
+        Stay s=stays.get(i);
         if(s!=null){
             Booking b=new Booking();
             
@@ -82,19 +127,16 @@ public class FXMLguestController implements Initializable {
             tray.setMessage("You successufuly make a reservation in our application");
             tray.setNotificationType(NotificationType.SUCCESS);
             tray.showAndDismiss(Duration.millis(1000));
-        refreshlist();
-            Mailapi.send("testapimail63@gmail.com", "TESTapimail2022", "jihene.saidi@esprit.tn", "Reservation", "You successfuly make a reservation in our application ");
+      
+            //Mailapi.send("testapimail63@gmail.com", "TESTapimail2022", "jihene.saidi@esprit.tn", "Reservation", "You successfuly make a reservation in our application ");
 
     }
 
     @FXML
     private void viewfamily(ActionEvent event) {
-        id=listviewstay.getSelectionModel().getSelectedItem().getIdhost();
+        
     }
-    public void refreshlist(){
-        data=FXCollections.observableArrayList(ss.findAll());
-        listviewstay.setItems(data);
-    }
+    /*
     public void recherche_avance(){
         FilteredList<Stay> filtereddata=new FilteredList<>(data,b->true);
         tfsearch.textProperty().addListener((observable,oldvalue,newValue) -> {
@@ -134,7 +176,7 @@ public class FXMLguestController implements Initializable {
         
         listviewstay.setItems(filtereddata);
     }
-
+*/
     @FXML
     private void gotofacebook(ActionEvent event) {
         Runtime rt = Runtime.getRuntime();
@@ -143,6 +185,48 @@ public class FXMLguestController implements Initializable {
                 rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
         } catch (IOException ioException) {
                 ioException.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void next(ActionEvent event) {
+        if(i<max_stays-1){
+            i++;
+            Stay s=stays.get(i);
+        
+        
+        String picture ="file:" + "C:\\\\Users\\\\HP\\\\Desktop\\\\PiDev\\\\PiDev\\\\src\\\\img\\\\stay"+i+".jpg";
+        //String familyname=serviceuser.findbyif(s.getIdhost).getNom();
+        //label.setText(familyname);
+        labelfamily.setText(""+s.getIdhost());
+        labelcapacity.setText(""+s.getCapacity());
+        labeldescription.setText(""+s.getDescription());
+        labelstartdate.setText(""+s.getStartdate_availability());
+        labelenddate.setText(""+s.getEnddate_availability());
+         Image image = new Image(picture);
+
+        imageview.setImage(image);
+        }
+    }
+
+    @FXML
+    private void previous(ActionEvent event) {
+        if(i>0){
+            i--;
+            Stay s=stays.get(i);
+        
+        
+        String picture ="file:" + "C:\\\\Users\\\\HP\\\\Desktop\\\\PiDev\\\\PiDev\\\\src\\\\img\\\\stay"+i+".jpg";
+        //String familyname=serviceuser.findbyif(s.getIdhost).getNom();
+        //label.setText(familyname);
+        labelfamily.setText(""+s.getIdhost());
+        labelcapacity.setText(""+s.getCapacity());
+        labeldescription.setText(""+s.getDescription());
+        labelstartdate.setText(""+s.getStartdate_availability());
+        labelenddate.setText(""+s.getEnddate_availability());
+         Image image = new Image(picture);
+
+        imageview.setImage(image);
         }
     }
     

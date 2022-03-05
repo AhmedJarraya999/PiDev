@@ -8,6 +8,7 @@ package GUI;
 import entity.Booking;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,7 +24,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import service.BookingService;
 
@@ -35,11 +39,23 @@ import service.BookingService;
 public class FXMLviewreservationController implements Initializable {
 
     @FXML
-    private ListView<Booking> listviewbooking;
+    private TableView<Booking> listviewbooking;
     @FXML
     private TextField tfsearch;
     ObservableList<Booking> data=FXCollections.observableArrayList();
     BookingService bs=new BookingService();
+    @FXML
+    private TableColumn<Booking, Integer> id;
+    @FXML
+    private TableColumn<Booking, Integer> idhost;
+    @FXML
+    private TableColumn<Booking, Integer> idguest;
+    @FXML
+    private TableColumn<Booking, Date> bookingdate;
+    @FXML
+    private TableColumn<Booking, Date> startdate;
+    @FXML
+    private TableColumn<Booking, Date> enddate;
 
     /**
      * Initializes the controller class.
@@ -86,7 +102,16 @@ public class FXMLviewreservationController implements Initializable {
         
     }
     public void refreshlist(){
-        data=FXCollections.observableArrayList(bs.findByIdhost(3));
+        data.clear();
+        //data=FXCollections.observableArrayList(bs.findByIdhost(iduser));//fil integration
+        data=FXCollections.observableArrayList(bs.findAll());
+        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        idhost.setCellValueFactory(new PropertyValueFactory<>("idhost"));
+        idguest.setCellValueFactory(new PropertyValueFactory<>("idguest"));
+        bookingdate.setCellValueFactory(new PropertyValueFactory<>("bookingdate"));
+        startdate.setCellValueFactory(new PropertyValueFactory<>("firstDate"));
+        enddate.setCellValueFactory(new PropertyValueFactory<>("lastDate"));
+        
         listviewbooking.setItems(data);
         
     }
@@ -126,6 +151,13 @@ public class FXMLviewreservationController implements Initializable {
         });
         
         listviewbooking.setItems(filtereddata);
+    }
+
+    @FXML
+    private void sortbydate(ActionEvent event) {
+        data=FXCollections.observableArrayList(bs.sortedByDate());
+        listviewbooking.setItems(data);
+                
     }
     
 }
