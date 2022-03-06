@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxblog.control.ExpSampleController">
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#Click" prefHeight="180.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxblog.control.ExpSampleController">
    <children>
       <Label fx:id="lb_title" text="Title" textFill="#805b27">
          <padding>
@@ -32,7 +32,7 @@
             <Insets left="30.0" />
          </padding>
       </Label>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="26.0" prefWidth="316.0">
          <children>
             <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="53.0" text="Likes">
                <HBox.margin>
@@ -62,5 +62,6 @@
             </Label>
          </children>
       </HBox>
+      <Label fx:id="id_exp" text="id_exp" />
    </children>
 </VBox>

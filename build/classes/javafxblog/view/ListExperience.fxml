@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -21,16 +20,12 @@
          <top>
             <Pane prefHeight="200.0" prefWidth="1103.0" style="-fx-background-color: #4f86f7;" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="tf_idexp" layoutX="178.0" layoutY="150.0" promptText="id experience" />
                   <Text layoutX="52.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explore experiences" textAlignment="CENTER" wrappingWidth="503.13671875">
                      <font>
                         <Font size="38.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btn_add" layoutX="831.0" layoutY="154.0" mnemonicParsing="false" onAction="#add_exp" prefHeight="32.0" prefWidth="79.0" text="add" />
-                  <Button fx:id="btn_delete" layoutX="929.0" layoutY="154.0" mnemonicParsing="false" onAction="#delete_exp" prefHeight="32.0" prefWidth="78.0" text="delete" />
-                  <Button fx:id="btn_modify" layoutX="1021.0" layoutY="154.0" mnemonicParsing="false" onAction="#modify_exp" prefHeight="32.0" prefWidth="78.0" text="modify" />
-                  <Button layoutX="52.0" layoutY="153.0" mnemonicParsing="false" onAction="#RfereshList" text="REFRESH" textOverrun="CENTER_ELLIPSIS" />
+                  <Button fx:id="btn_add" layoutX="1063.0" layoutY="148.0" mnemonicParsing="false" onAction="#add_exp" prefHeight="32.0" prefWidth="79.0" text="add" />
                </children>
             </Pane>
          </top>
