@@ -27,7 +27,7 @@ public class FXMain extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/ProfileSettings.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/Authentification.fxml"));
             
             Scene scene = new Scene(root);
             

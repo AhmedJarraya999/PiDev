@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -122,7 +123,7 @@ public class AuthentificationController implements Initializable {
     private RadioButton rbstay;
     @FXML
     private ToggleGroup g1;
-
+public static int idglobal;
     /**
      * Initializes the controller class.
      */
@@ -199,7 +200,28 @@ public class AuthentificationController implements Initializable {
         helloLB.setVisible(state);
         
     }
+    //check the validity of the email
+public static boolean validEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        if (email.isEmpty()) {
+            return false;
+        }
+        Pattern pat = Pattern.compile(emailRegex);
+        return pat.matcher(email).matches();
+       
+}
 
+//check the validity of the password 
+// digit + lowercase char + uppercase char + punctuation + symbol
+public static boolean validPassword( String password)
+      {
+          String passwordRegex ="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
+          if (password.isEmpty()){
+              return false;
+          }
+          Pattern pat = Pattern.compile(passwordRegex);
+           return pat.matcher(password).matches();
+      }
     @FXML
     private void performeSignup(MouseEvent event) {
         String errors="";
@@ -215,9 +237,17 @@ public class AuthentificationController implements Initializable {
         if(emailTF.getText().trim().isEmpty()){
             errors+="- Please enter a email\n";
         }
+         if(!validEmail(emailTF.getText().trim())){
+            errors+="- Please enter a valid email";
+        }
+        
         if(passwordPF.getText().trim().isEmpty()){
             errors+="- Please enter a password\n";
         }
+        if(!validPassword(passwordPF.getText().trim())){
+            errors+="- Please enter a valid password that cotains lowercase char, uppercase char ponctuation and symbol\n";
+        }
+        
         if(phonetf.getText().trim().isEmpty()){
             errors+="- Please enter a phone number\n";
         }
@@ -253,6 +283,7 @@ public class AuthentificationController implements Initializable {
     private void performLogIn(MouseEvent event) {
         User login=us.checklogin(loginTF.getText(), CryptWithMD5.cryptWithMD5(passwordTF.getText()));
         if(login!=null){
+            idglobal=login.getId();
             if(login.getRole().equals(Role.ADMIN)){
                 try {
                     Stage stageclose=(Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -271,10 +302,38 @@ public class AuthentificationController implements Initializable {
                 }
             }
             else if(login.getRole().equals(Role.HOST)){
-                System.out.println("interface host");
+                try {
+                    Stage stageclose=(Stage) ((Node)event.getSource()).getScene().getWindow();
+
+                    stageclose.close();
+                    Parent root=FXMLLoader.load(getClass().getResource("/GUI/HostHome.fxml"));
+                    Stage stage =new Stage();
+
+                    Scene scene = new Scene(root);
+
+                    stage.setTitle("signup");
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationController.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
             else{
-                System.out.println("interface GUEST");
+                try {
+                    Stage stageclose=(Stage) ((Node)event.getSource()).getScene().getWindow();
+
+                    stageclose.close();
+                    Parent root=FXMLLoader.load(getClass().getResource("/GUI/GuestHome.fxml"));
+                    Stage stage =new Stage();
+
+                    Scene scene = new Scene(root);
+
+                    stage.setTitle("signup");
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationController.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
         else{
@@ -289,7 +348,7 @@ public class AuthentificationController implements Initializable {
     private void closeScene(MouseEvent event) {
         System.exit(0);
     }
-
+   
     @FXML
     private void reduceOnClick(MouseEvent event) {
         Stage currentStage;

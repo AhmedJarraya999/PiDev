@@ -7,7 +7,15 @@
 }
 .button
 {
-     -fx-background-color:  #111111;
+     -fx-background-color:  #ffffff;
     -fx-background-radius: 15;
      
+}
+#mystay
+{
+    -fx-background-color:  #111111;
+}
+#profilesettings
+{
+    -fx-background-color:  #111111;
 }

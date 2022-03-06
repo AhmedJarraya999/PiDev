@@ -9,15 +9,16 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.GuestHomeController">
+<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="957.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GuestHomeController">
     <stylesheets>
         <URL value="@hosthome.css" />
     </stylesheets>
         <children>
-      <BorderPane prefHeight="510.0" prefWidth="688.0">
+      <BorderPane prefHeight="637.0" prefWidth="957.0">
          <left>
             <VBox prefHeight="443.0" prefWidth="185.0" spacing="45.0" style="-fx-background-color: #0A74CD;" BorderPane.alignment="CENTER">
                <children>
@@ -54,7 +55,7 @@
                         <Insets bottom="15.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="184.0" style="-fx-background-color: #0A74CD;" text=" Profile settings" textFill="#fcfcfc">
+                  <Button mnemonicParsing="false" onAction="#profilesettings" prefHeight="42.0" prefWidth="184.0" style="-fx-background-color: #0A74CD;" text=" Profile settings" textFill="#fcfcfc">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -109,7 +110,7 @@
             </VBox>
          </left>
          <top>
-            <VBox prefHeight="119.0" prefWidth="716.0" style="-fx-background-color: #0A74CD;">
+            <VBox prefHeight="119.0" prefWidth="888.0" style="-fx-background-color: #0A74CD;">
                <children>
                   <Label text="Star Tours" textAlignment="RIGHT" textFill="WHITE" translateX="30.0">
                      <VBox.margin>
@@ -129,7 +130,7 @@
                         <Insets top="10.0" />
                      </padding>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="85.0" translateY="-15.0">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="295.0" translateY="-15.0">
                      <VBox.margin>
                         <Insets left="580.0" right="80.0" />
                      </VBox.margin>
@@ -137,7 +138,7 @@
                         <Image url="@../assets/shutdown.png" />
                      </image>
                   </ImageView>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Logout" translateX="90.0" translateY="-12.0">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Logout" translateX="300.0" translateY="-12.0">
                      <VBox.margin>
                         <Insets bottom="5.0" left="550.0" right="100.0" />
                      </VBox.margin>
@@ -151,6 +152,9 @@
                </BorderPane.margin>
             </VBox>
          </top>
+         <center>
+            <Pane fx:id="paneps" prefHeight="523.0" prefWidth="710.0" BorderPane.alignment="CENTER" />
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

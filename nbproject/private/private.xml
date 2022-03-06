@@ -3,15 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/GUI/FXMLforgotpassword.fxml</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/utils/CryptWithMD5.java</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/GUI/hosthome.css</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/GUI/AuthentificationController.java</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/GUI/FXMLadminController.java</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/GUI/FXMLforgotpasswordController.java</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/GUI/HostHome.fxml</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/GUI/FXMLadmin.fxml</file>
-            <file>file:/C:/Users/jaray/3D%20Objects/wetransfer_usermanagement-zip_2022-03-01_0000/UserManagement/UserManagement/src/usermanagement/FXMain.java</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/utils/Myconnection.java</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/guesthome.css</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/GuestHome.fxml</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/hosthome.css</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/ProfileSettings.fxml</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/HostHomeController.java</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/profilesettings.css</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/usermanagement/UserManagement.java</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/AuthentificationController.java</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/GuestHomeController.java</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/HostHome.fxml</file>
+            <file>file:/C:/Users/jaray/OneDrive/Documents/PiDev-ahmed/PiDev-ahmed/src/GUI/ProfileSettingsController.java</file>
         </group>
     </open-files>
 </project-private>

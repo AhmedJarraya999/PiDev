@@ -5,3 +5,9 @@
 .mainFxmlClass {
 
 }
+.button
+{
+     -fx-background-color:   #0A74CD;
+    -fx-background-radius: 15;
+     
+}

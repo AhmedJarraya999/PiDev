@@ -5,3 +5,13 @@
 .mainFxmlClass {
 
 }
+.button
+{
+     -fx-background-color:  #ffffff;
+    -fx-background-radius: 15;
+     
+}
+#btnav
+{
+    -fx-background-color:  #111111;
+}

@@ -125,7 +125,7 @@ public class UserService implements ISservice<User>{
                 u.setId(rs.getInt("id"));
                 u.setUsername(rs.getString("username"));
                 u.setPhone(rs.getInt("phone"));
-                u.setPassword(cryptWithMD5(rs.getString("password")));                
+                u.setPassword((rs.getString("password")));                
                 u.setRole(Role.valueOf(rs.getString("role")));
             }
             else{
@@ -161,7 +161,7 @@ public class UserService implements ISservice<User>{
                 u.setId(rs.getInt("id"));
                 u.setUsername(rs.getString("username"));
                 u.setPhone(rs.getInt("phone"));
-                u.setPassword(cryptWithMD5(rs.getString("password")));                
+                u.setPassword((rs.getString("password")));                
                 u.setRole(Role.valueOf(rs.getString("role")));
             }else{
                 System.out.println("erreru");
