@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reclamation.AddReclamationController">
+   <children>
+      <BorderPane prefHeight="383.0" prefWidth="522.0">
+         <top>
+            <Label prefHeight="30.0" prefWidth="45.0" text="Stay" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets left="50.0" top="30.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#1e36cde5" />
+                        <Stop color="#4059a9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </top>
+         <center>
+            <Pane prefHeight="281.0" prefWidth="522.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutY="15.0" prefHeight="245.0" prefWidth="308.0" spacing="10.0">
+                     <children>
+                        <Rating id="rating_id" fx:id="fxrating" prefHeight="32.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </Rating>
+                        <TextArea fx:id="fxcomment" prefHeight="126.0" prefWidth="178.0" promptText="comment">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="50.0" right="80.0" top="20.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <HBox prefHeight="59.0" prefWidth="308.0">
+                           <children>
+                              <Button id="sub_btn" fx:id="fxsub_btn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="58.0" text="Submit">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button id="sub_btn" fx:id="fxmod_btn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="58.0" text="Modify">
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button id="sub_btn" fx:id="fxdel_btn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="58.0" text="Delete">
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets top="50.0" />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <JFXButton fx:id="btnback" buttonType="RAISED" onAction="#Back" prefHeight="33.0" prefWidth="75.0" style="-fx-border-radius: 8px; -fx-border-color: #626dc4;" text="Back" textFill="#626dc4" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="380.0" />
+               </BorderPane.margin>
+            </JFXButton>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

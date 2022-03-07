@@ -8,7 +8,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
 <?import org.controlsfx.control.Rating?>
 
 <AnchorPane id="AnchorPane" prefHeight="315.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rating.RatingFXMLController">
@@ -16,13 +15,12 @@
         <URL value="@ratingfxml.css" />
     </stylesheets>
    <children>
-      <VBox layoutX="14.0" layoutY="14.0" prefHeight="249.0" prefWidth="188.0" spacing="10.0">
+      <VBox layoutX="13.0" layoutY="14.0" prefHeight="247.0" prefWidth="190.0" spacing="10.0">
          <children>
             <TextField id="user_id" fx:id="user_id" promptText="user_id" />
             <TextField id="booking_id" fx:id="stay_id" promptText="stay_id" />
             <Rating id="rating_id" fx:id="fxrating" />
-            <Text fx:id="fxvcomment" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="189.13671875" />
-            <TextArea fx:id="fxcomment" prefHeight="86.0" prefWidth="188.0" promptText="comment" />
+            <TextArea fx:id="fxcomment" prefHeight="88.0" prefWidth="190.0" promptText="comment" />
          </children>
       </VBox>
       <Button id="sub_btn" fx:id="fxsub_btn" layoutX="144.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="58.0" text="Submit" />
