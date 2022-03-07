@@ -225,6 +225,10 @@ public static boolean validPassword( String password)
     @FXML
     private void performeSignup(MouseEvent event) {
         String errors="";
+        if(us.findByUsername(usernametf.getText().trim()))
+            errors+="- Username already exists please choose another one\n";
+        if(us.findByEmailb(emailTF.getText().trim()))
+            errors+="- Email already exists please choose another one\n";
         if(firstnametf.getText().trim().isEmpty()){
             errors+="- Please enter a firstname\n";
         }
@@ -257,6 +261,7 @@ public static boolean validPassword( String password)
         if(errors.length()>0){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Invalid inputs");
+            alert.setHeaderText("Please provide valid inputs");
             alert.setContentText(errors);
             alert.showAndWait();
         }
@@ -275,8 +280,8 @@ public static boolean validPassword( String password)
             }
             us.add(u);
               Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Succeful signup");
-            alert.setHeaderText("User succefully signed up");
+            alert.setTitle("Successful signup");
+            alert.setHeaderText("User succesffuly signed up");
             alert.setContentText("You can login now to your account...");
             alert.showAndWait();
         }

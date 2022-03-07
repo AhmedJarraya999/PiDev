@@ -102,9 +102,10 @@ public class FXMLforgotpasswordController implements Initializable {
             tfverificationcode.setVisible(true);
         }
         else{
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Email does not exist");
             alert.setTitle("Invalid email");
-            alert.setContentText("Email doesn't exist");
+            alert.setContentText("Please check again the provided email");
             alert.showAndWait();
         }
     }
