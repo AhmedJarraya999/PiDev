@@ -137,6 +137,36 @@ public class UserService implements ISservice<User>{
         }
         return u;
     }
+    
+    public Boolean findByUsername(String username)
+    {
+         List<User> users = findAll();
+         List<User> resultat=users.stream().filter(user->username.equals(user.getUsername())).collect(Collectors.toList());
+         if(resultat.isEmpty())
+         {
+            return false;
+         }
+         else
+             {
+            return true;
+             }
+         
+    }
+    public Boolean findByEmailb(String email)
+    {
+         List<User> users = findAll();
+         List<User> resultat=users.stream().filter(user->email.equals(user.getEmail())).collect(Collectors.toList());
+         if(resultat.isEmpty())
+         {
+            return false;
+         }
+         else
+             {
+            return true;
+             }
+         
+    }
+  
     public List<User> findByEmail(String email){
          List<User> users = findAll();
          List<User> resultat=users.stream().filter(user->email.equals(user.getEmail())).collect(Collectors.toList());

@@ -274,6 +274,11 @@ public static boolean validPassword( String password)
                 u.setRole(Role.STAY);
             }
             us.add(u);
+              Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Succeful signup");
+            alert.setHeaderText("User succefully signed up");
+            alert.setContentText("You can login now to your account...");
+            alert.showAndWait();
         }
         
         

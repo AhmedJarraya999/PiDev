@@ -107,6 +107,7 @@ public class FXMLadminController implements Initializable {
         if(errors.length()>0){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Invalid inputs");
+            alert.setHeaderText("Not valid inputs");
             alert.setContentText(errors);
             alert.showAndWait();
         }
@@ -190,7 +191,7 @@ public class FXMLadminController implements Initializable {
             AnimationType type = AnimationType.POPUP;
             tray.setAnimationType(type);
             tray.setTitle("Delete Success");
-            tray.setMessage("User is deleted");
+            tray.setMessage("User is banned from our application");
             tray.setNotificationType(NotificationType.WARNING);
             tray.showAndDismiss(Duration.millis(1000));
             refreshlist();

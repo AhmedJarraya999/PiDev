@@ -42,6 +42,8 @@ public class HostHomeController implements Initializable {
     private Button experiences;
     @FXML
     private Pane paneps;
+    @FXML
+    private Button logout;
 
     /**
      * Initializes the controller class.
@@ -59,6 +61,8 @@ public class HostHomeController implements Initializable {
             Logger.getLogger(GuestHomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    
     @FXML
     private void profilesettings(ActionEvent event) {
         setUi("ProfileSettings");
@@ -87,24 +91,22 @@ public class HostHomeController implements Initializable {
      @FXML
     private void logout (ActionEvent event) throws IOException
     {
-        //did not work for me
-       /*  try {
-            Stage stageclose=(Stage) ((Node)event.getSource()).getScene().getWindow();
-            
-            stageclose.close();
-            Parent root=FXMLLoader.load(getClass().getResource("/GUI/Authentification.fxml"));
-            Stage stage =new Stage();
-            
-            Scene scene = new Scene(root);
-            
-            stage.setTitle("signup");
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(AuthentificationController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-               */
+        try {
+                    Stage stageclose=(Stage) ((Node)event.getSource()).getScene().getWindow();
+
+                    stageclose.close();
+                    Parent root=FXMLLoader.load(getClass().getResource("/GUI/Authentification.fxml"));
+                    Stage stage =new Stage();
+
+                    Scene scene = new Scene(root);
+
+                    stage.setTitle("signup");
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    
      
        
     }

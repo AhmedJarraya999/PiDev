@@ -14,7 +14,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -25,6 +30,8 @@ public class GuestHomeController implements Initializable {
 
     @FXML
     private Pane paneps;
+    @FXML
+    private Button logout;
 
     /**
      * Initializes the controller class.
@@ -65,9 +72,25 @@ public class GuestHomeController implements Initializable {
         //setUi("ProfileSettings");
         
     }
-    
-    
-    
-    
-    
+    @FXML
+    private void logout (ActionEvent event) throws IOException
+    {
+        
+        try {
+                    Stage stageclose=(Stage) ((Node)event.getSource()).getScene().getWindow();
+
+                    stageclose.close();
+                    Parent root=FXMLLoader.load(getClass().getResource("/GUI/Authentification.fxml"));
+                    Stage stage =new Stage();
+
+                    Scene scene = new Scene(root);
+
+                    stage.setTitle("signup");
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthentificationController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+      }
+     
 }
