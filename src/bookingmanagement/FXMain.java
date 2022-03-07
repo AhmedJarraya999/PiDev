@@ -30,6 +30,7 @@ public class FXMain extends Application {
             //Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXMLhost.fxml"));
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXMLguest.fxml"));
             
+            
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/GUI/newCascadeStyleSheet.css");
             

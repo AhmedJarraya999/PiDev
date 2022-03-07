@@ -83,7 +83,7 @@ public class FXMLguestController implements Initializable {
       
         
         Stay s=stays.get(i);
-        String picture ="file:" + "C:\\\\Users\\\\HP\\\\Desktop\\\\PiDev\\\\PiDev\\\\src\\\\img\\\\stay"+i+".jpg";
+        String picture ="file:" + "C:\\\\Users\\\\Mortadha\\\\Desktop\\\\PiDev-jihene\\\\src\\\\img\\\\stay"+i+".jpg";
         //String familyname=serviceuser.findbyif(s.getIdhost).getNom();
         //label.setText(familyname);
         labelfamily.setText(""+s.getIdhost());
@@ -195,7 +195,7 @@ public class FXMLguestController implements Initializable {
             Stay s=stays.get(i);
         
         
-        String picture ="file:" + "C:\\\\Users\\\\HP\\\\Desktop\\\\PiDev\\\\PiDev\\\\src\\\\img\\\\stay"+i+".jpg";
+        String picture ="file:" + "C:\\\\Users\\\\Mortadha\\\\Desktop\\\\PiDev-jihene\\\\src\\\\img\\\\stay"+i+".jpg";
         //String familyname=serviceuser.findbyif(s.getIdhost).getNom();
         //label.setText(familyname);
         labelfamily.setText(""+s.getIdhost());
@@ -216,7 +216,7 @@ public class FXMLguestController implements Initializable {
             Stay s=stays.get(i);
         
         
-        String picture ="file:" + "C:\\\\Users\\\\HP\\\\Desktop\\\\PiDev\\\\PiDev\\\\src\\\\img\\\\stay"+i+".jpg";
+        String picture ="file:" + "C:\\\\Users\\\\Mortadha\\\\Desktop\\\\PiDev-jihene\\\\src\\\\img\\\\stay"+i+".jpg";
         //String familyname=serviceuser.findbyif(s.getIdhost).getNom();
         //label.setText(familyname);
         labelfamily.setText(""+s.getIdhost());

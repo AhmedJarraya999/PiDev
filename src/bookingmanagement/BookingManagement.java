@@ -34,7 +34,7 @@ public class BookingManagement {
         //ss.add(s);
         //System.out.println(ss.findAll());
         //bs.add(b);
-        System.out.println(bs.findAll());
+        System.out.println(bs.sortedByDate());
     }
     
 }

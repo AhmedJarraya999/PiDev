@@ -6,7 +6,6 @@
 package service;
 
 import entity.Booking;
-import entity.Stay;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +21,7 @@ import utils.Myconnection;
 
 /**
  *
- *@author Jihene
+ * @author Jihene
  */
 public class BookingService implements IService<Booking>{
     Connection cnx;
@@ -32,8 +31,8 @@ public class BookingService implements IService<Booking>{
     @Override
     public void add(Booking t) {
         try {
-            Statement st1;
-            st1=cnx.createStatement();
+            Statement st;
+            st=cnx.createStatement();
             String query="INSERT INTO `booking`"
                     + "( `idhost`, `idguest`,"
                     + " `bookingdate`,"
@@ -41,7 +40,7 @@ public class BookingService implements IService<Booking>{
                     + " VALUES ('"+t.getIdhost()+"','"+t.getIdguest()+"',"
                     + "'"+t.getBookingdate()+"','"+t.getFirstDate()+"',"
                     + "'"+t.getLastDate()+"')";
-            st1.executeUpdate(query);
+            st.executeUpdate(query);
         } catch (SQLException ex) {
             Logger.getLogger(BookingService.class.getName()).log(Level.SEVERE, null, ex);
         }

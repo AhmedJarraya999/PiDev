@@ -78,7 +78,7 @@ public class StayService implements IService<Stay>{
 
     @Override
     public List<Stay> findAll() {
-        List<Stay> ls1=new ArrayList<>();
+        List<Stay> ls=new ArrayList<>();
         try {
             Statement st=cnx.createStatement();
             String query="select * from stay";
@@ -91,12 +91,12 @@ public class StayService implements IService<Stay>{
                 s.setStartdate_availability(rs.getDate("startdate_availability"));
                 s.setEnddate_availability(rs.getDate("enddate_availability"));
                 s.setIdhost(rs.getInt("idhost"));
-                ls1.add(s);
+                ls.add(s);
             }
         } catch (SQLException ex) {
             Logger.getLogger(StayService.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return ls1;
+        return ls;
     }
     
 }
