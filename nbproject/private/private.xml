@@ -3,19 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/utils/Myconnection.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/utils/Mailapi.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/GUI/FXMLhostController.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/service/BookingService.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/service/IService.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/entity/Stay.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/GUI/FXMLguestController.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/service/StayService.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/GUI/FXMLviewreservationController.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/bookingmanagement/FXMain.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/GUI/newCascadeStyleSheet.css</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/bookingmanagement/BookingManagement.java</file>
-            <file>file:/C:/Users/HP/Downloads/wetransfer_bookingmanagement-zip_2022-02-28_2320/BookingManagement/BookingManagement/src/entity/Booking.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/service/IService.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/GUI/FXMLviewreservation.fxml</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/GUI/FXMLhost.fxml</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/service/BookingService.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/GUI/FXMLviewreservationController.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/service/StayService.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/GUI/FXMLguestController.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/GUI/FXMLhostController.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/bookingmanagement/FXMain.java</file>
+            <file>file:/C:/Users/HP/Desktop/Pidev/PiDev/src/GUI/FXMLguest.fxml</file>
         </group>
     </open-files>
 </project-private>
