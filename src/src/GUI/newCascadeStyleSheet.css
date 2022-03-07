@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 28, 2022, 8:13:21 PM
+    Author     : Mortadha
+*/
+
+
+
+
+
+.button{
+    -fx-background-color:  #f0f8ff;
+    -fx-background-radius: 15;
+}
+.button:hover{
+    -fx-background-color: #787878;
+}
+
+
+.list-cell{
+    -fx-font-size:21.0;
+}

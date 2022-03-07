@@ -27,9 +27,8 @@ public class FXMain extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXMLhost.fxml"));
-            //Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXMLguest.fxml"));
-            
+            //Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXMLhost.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXMLguest.fxml"));
             
             
             Scene scene = new Scene(root);
