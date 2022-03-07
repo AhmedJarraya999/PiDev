@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/control/AddExperienceController.java</file>
-            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/utils/ConnetionSingletion.java</file>
-            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/control/ListExperienceController.java</file>
-            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/entity/Experience.java</file>
             <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/control/CommentSampleController.java</file>
+            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/control/ModifyCommentController.java</file>
             <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/control/ExpSampleController.java</file>
-            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/dao/ExperienceService.java</file>
+            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/control/CommentsdisplayController.java</file>
+            <file>file:/C:/Users/tasni/Documents/NetBeansProjects/JavaFXBlog/src/javafxblog/view/experience.fxml</file>
         </group>
     </open-files>
 </project-private>

@@ -60,7 +60,7 @@
                         <Insets left="10.0" top="3.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="id_comment" text="id">
+                  <Label fx:id="id_comment" text="id" visible="false">
                      <HBox.margin>
                         <Insets left="50.0" top="3.0" />
                      </HBox.margin>
@@ -71,8 +71,8 @@
       </VBox>
       <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="17.0">
         <items>
-          <MenuItem fx:id="delete_menu" mnemonicParsing="false" onAction="#delete_comment" text="Delete" />
-          <MenuItem fx:id="modify_menu" mnemonicParsing="false" text="Modify" />
+          <MenuItem fx:id="delete_menu" mnemonicParsing="false" onAction="#Delete_comment" text="Delete" />
+          <MenuItem fx:id="modify_menu" mnemonicParsing="false" onAction="#Modify_comment" text="Modify" />
         </items>
          <HBox.margin>
             <Insets right="30.0" top="10.0" />
