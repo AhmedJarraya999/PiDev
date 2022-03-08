@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="326.0" prefWidth="504.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="reclamation.AddReclamationController">
+   <children>
+      <BorderPane prefHeight="354.0" prefWidth="555.0">
+         <top>
+            <Label text="Reclamation" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets left="50.0" top="10.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#1e36cde5" />
+                        <Stop color="#4059a9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </top>
+         <center>
+            <Pane prefHeight="363.0" prefWidth="404.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="363.0" prefWidth="208.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="Subject">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="50.0" top="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Reclamation">
+                           <VBox.margin>
+                              <Insets left="50.0" top="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="208.0" prefHeight="363.0" prefWidth="252.0">
+                     <children>
+                        <JFXTextField fx:id="fts" style="-fx-background-color: white;" unFocusColor="#4059a9">
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <CustomTextField fx:id="ftr" alignment="TOP_LEFT" prefHeight="119.0" prefWidth="252.0" style="-fx-border-color: #4059a9;">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </CustomTextField>
+                        <JFXButton fx:id="btnsend" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #626dc4; -fx-background-radius: 8px;" text="Send" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="180.0" top="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <JFXButton fx:id="btnback" buttonType="RAISED" layoutX="56.0" layoutY="248.0" onAction="#Back" prefHeight="35.0" prefWidth="75.0" style="-fx-border-radius: 8px; -fx-border-color: #626dc4;" text="Back" textFill="#626dc4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

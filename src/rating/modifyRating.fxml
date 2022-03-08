@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="479.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="rating.ModifyRatingController">
+   <children>
+      <BorderPane prefHeight="371.0" prefWidth="513.0">
+         <center>
+            <Pane prefHeight="314.0" prefWidth="493.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="282.0">
+                     <children>
+                        <Rating fx:id="rate" prefHeight="32.0" prefWidth="187.0" />
+                        <TextArea fx:id="comment" prefHeight="118.0" prefWidth="186.0">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                     <padding>
+                        <Insets left="100.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <HBox layoutX="98.0" layoutY="203.0" prefHeight="100.0" prefWidth="384.0">
+                     <children>
+                        <JFXButton fx:id="update" onAction="#updateRate" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #626dc4; -fx-border-radius: 8px;" text="Update" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="3.0" top="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="back" layoutX="110.0" layoutY="60.0" onAction="#BackBtn" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #626dc4; -fx-border-radius: 8px;" text="Back" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="220.0" top="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </center>
+         <top>
+            <Label prefHeight="57.0" prefWidth="490.0" text="Modify Rating" textFill="#2952b9" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets right="350.0" top="30.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets left="40.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

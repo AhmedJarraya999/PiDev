@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="172.0" prefWidth="550.0" style="-fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reclamation.ReclamationSampleController">
+   <children>
+      <Pane prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: #d3def2;">
+         <children>
+            <VBox prefHeight="238.0" prefWidth="139.0">
+               <children>
+                  <Label alignment="TOP_LEFT" text="Subject :" textFill="#080775">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" top="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Reclamation :" textFill="#070773">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" top="40.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="139.0" prefHeight="238.0" prefWidth="304.0">
+               <children>
+                  <Label fx:id="subject" text="Text">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="reclamation" text="Text">
+                     <VBox.margin>
+                        <Insets top="45.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>
